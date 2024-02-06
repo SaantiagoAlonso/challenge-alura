@@ -23,6 +23,10 @@ margin: 200px 200px 200px 200px;
     color: darkblue;
 }
 
+.parrafo-adbertencia{
+    display: inline;
+}
+
 .rectangulo{
     width: 400px;
     height: 944px;
