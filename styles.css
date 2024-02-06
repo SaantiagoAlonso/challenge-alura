@@ -1,0 +1,32 @@
+/*body{
+    margin: 0;
+    box-sizing: border-box; /*pérmite ajustar el padding y border sin alterar el tamaño del contenedor
+}*/
+
+.contenedor{
+    position: relative;
+    width: 1400;
+    height: 1024;
+    background-color: lightblue;
+}
+
+.texto{
+position: absolute;
+width: 200px;
+height: 200px;
+background-color: brown;
+display: inline-block;
+margin: 200px 200px 200px 200px;
+}
+
+.text-area{
+    color: darkblue;
+}
+
+.rectangulo{
+    width: 400px;
+    height: 944px;
+    border-radius: 32px;
+    background-color: aquamarine;
+    margin-left: auto;
+}
