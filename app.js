@@ -3,7 +3,8 @@ let textoEncriptado = "";
 let letra = "";
 let textoDesenncriptado = ""
 let subtext = "";
-let bandera = 0;
+let j = 0;
+let comprobacion = ["",0]
 
 function encriptar(text){
     
@@ -121,6 +122,7 @@ function encriptar(text){
     
     console.log(textoDesenncriptado)
 }*/
+letra = ""
 
 function desencriptar(text){
 
@@ -130,49 +132,51 @@ function desencriptar(text){
        
         switch (subtext){
             case "ai":
-                return "a";
+                return ["a",1];
             case "enter":
-                return "e";
+                return ["e",1];
             case "imes":
-                return "i";
+                return ["i",1];
 
             case "ober":
-                return "o";
+                return ["o",1];
 
             case "ufat":
-                return "u";
+                return ["u",1];
             default:
-                return 0; 
+                return ["",0]; 
        }
     }
 
-    while(bandera == 0){
-       
-        let j = 0;
+    while(j < text.length){
         
+
             if(text[j] == 'a' ||text[j] == 'e' || text[j] == 'i'|| text[j] == 'o'|| text[j] == 'u'){
             
-                for (j;j<6;j++) {
-                    subtext = subtext + text[j];
-                    letra = verificar(subtext);
-                    if(letra == 0){
-                        continue;
-                    }else{
-                        textoDesenncriptado = textoDesenncriptado + letra
-                        break;
-                    }
-                } 
+                while(comprobacion[1]==0){
+
+                    subtext = subtext + text[j]
+                    j = j + 1;
+                    comprobacion = verificar(subtext)
+                }
+                  
+                textoDesenncriptado = textoDesenncriptado + comprobacion[0];
+                subtext = ""; 
+                comprobacion = [0, 0];                  
+                    
+    
+               
+                
             }else{
-                textoDesenncriptado = textoDesenncriptado + letra
+                textoDesenncriptado = textoDesenncriptado + text[j]
+                j = j + 1;
+                console.log(textoDesenncriptado)
             }
 
-            if(j == text.length){
-                bandera = 1;
-            }
 
         }
 
-        console.log(textoDesenncriptado);
+        console.log('texto desencriptado' + "  "  +  textoDesenncriptado);
 
     }
 
@@ -183,4 +187,4 @@ function desencriptar(text){
 encriptar('loc');
 
 
-desencriptar('loberc');
+desencriptar('lobercober');
