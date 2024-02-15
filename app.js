@@ -1,4 +1,4 @@
-let texto ="ase";
+let texto ="";
 let textoEncriptado = "";
 let letra = "";
 let textoDesenncriptado = ""
@@ -6,7 +6,10 @@ let subtext = "";
 let j = 0;
 let comprobacion = ["",0]
 
-function encriptar(text){
+
+
+
+function encriptar(texto){
     
     
     function encriptarVocal(letra){
@@ -29,10 +32,10 @@ function encriptar(text){
 
     }
     
-    for(let i=0; i < text.length; i++){      
+    for(let i=0; i < texto.length; i++){      
 
-        letra = text[i];
-        console.log(letra);
+        letra = texto[i];
+        // console.log(letra);
 
         if (letra == "a" || letra == "e" || letra == "i"|| letra == "o" || letra == "u"){
             letra = encriptarVocal(letra);
@@ -47,8 +50,15 @@ function encriptar(text){
 
    
     console.log(textoEncriptado)
+    textoEncriptado="";
 
    
+}
+
+function btn_encriptar(){
+    texto = document.getElementsByClassName("texto-entrada")[0].value
+    encriptar(texto)
+    texto = ""
 }
 
 /*function desencriptar(text){
@@ -170,7 +180,7 @@ function desencriptar(text){
             }else{
                 textoDesenncriptado = textoDesenncriptado + text[j]
                 j = j + 1;
-                console.log(textoDesenncriptado)
+                // console.log(textoDesenncriptado)
             }
 
 
@@ -184,7 +194,7 @@ function desencriptar(text){
 
 
 
-encriptar('loc');
+// encriptar('loco');
 
 
-desencriptar('lobercober');
+// desencriptar('lobercober');

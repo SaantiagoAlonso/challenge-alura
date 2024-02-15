@@ -1,36 +1,102 @@
-/*body{
+body{
     margin: 0;
-    box-sizing: border-box; /*pérmite ajustar el padding y border sin alterar el tamaño del contenedor
-}*/
+    /* box-sizing: border-box; /*pérmite ajustar el padding y border sin alterar el tamaño del contenedor */
+}
 
 .contenedor{
     position: relative;
     width: 1400;
-    height: 1024;
+    /* height: 1024; */
+    height: 940px;
     background-color: lightblue;
 }
 
-.texto{
-position: absolute;
-width: 200px;
-height: 200px;
-background-color: brown;
-display: inline-block;
-margin: 200px 200px 200px 200px;
+.contenedor-logo{
+    position: absolute;
+    display: inline-block;
+    margin-top: 45px;
 }
 
-.text-area{
+.texto{
+position: absolute; 
+width: 800px;
+height: 600px;
+background-color: brown;
+display: inline-block;
+margin-top: 100px;
+margin-left: 200px;
+}
+
+.texto-entrada{ 
+    width: 800px;
+    height: 600px;
+    resize: none;
+    background-color: lightblue;
+    border: none;
     color: darkblue;
+    font-size: 32px ;
+    
 }
 
 .parrafo-adbertencia{
-    display: inline;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-top: 0px;
 }
 
 .rectangulo{
+    display: inline-block;
     width: 400px;
-    height: 944px;
+    /* height: 700px; */
+    height: 750px;
     border-radius: 32px;
-    background-color: aquamarine;
-    margin-left: auto;
+    background-color: #FFFFFF;
+    margin-left: 1050px;
+    margin-top: 50px;
+
+}
+.contenedor-img{
+    display: inline-block;
+    margin-top: 100px;
+    text-align: center;
+}
+.btn-copiar{
+    display: block;
+    text-align: center;
+    margin-left: 65px;
+    margin-top: 80px;
+    width: 280px;
+    height: 50px;
+    border-radius: 30px;
+    background-color: rgba(177, 177, 246, 0.974);
+    font-size: 20px;
+}
+.contenedor-advertencia{
+    display: inline-block;
+    margin-left: 200px;
+    margin-top: -100px;
+    /* padding-bottom: 300px; */
+    
+}
+
+.btn-encriptar , .btn-desencriptar{
+    width: 350px;
+    height: 67px;
+    border-radius: 24px ;
+    font-size: 20px;
+    text-align: center;
+    /* border: 1px solid;  */
+    /* margin-left: 10px; */
+}
+.btn-encriptar{
+    background-color: rgba(24, 24, 208, 0.974);
+    margin-right: 40px;
+    color: aliceblue;
+}
+
+.btn-desencriptar{
+    background-color: rgba(177, 177, 246, 0.974);
+    margin-right: 40px;
+    color: black;
+
 }

@@ -12,22 +12,31 @@
     </header>
     <main>
         <div class="contenedor">
-            <img src="imagenes/Logo.png" alt="logo">
+            <div class="contenedor-logo">
+
+                <img src="imagenes/Logo.png" alt="logo">
+            </div>
             <div class="texto">
 
-                <!-- <textarea name="" id="" class="text-area" cols="30" rows="10">Ingrese su texto aqui</textarea> -->
+               <!-- <input class="texto-entrada" type="text"> -->
+               <textarea class="texto-entrada" name="entrada">Ingrese el texto aqui</textarea>
+
             </div>
             <div class="rectangulo">
-                <img src="imagenes/Muñeco.png" alt="muñeco">
-                <legend>Ningun mensaje fue encontrado</legend>
-                <span>ingresa el texto que desees encriptar o desencriptar</span>
-                <button>Copiar</button>
+                <div class="contenedor-img">
+                    <img src="imagenes/Muñeco.png" alt="muñeco">
+                    <h1>Ningun mensaje fue encontrado</h1>
+                    <span>ingresa el texto que desees encriptar o desencriptar</span>
+                    <button class="btn-copiar">Copiar</button>
+                </div>
             </div>
-            <div>
+            <div class="contenedor-advertencia">
                 <img src="imagenes/bi_exclamation-circle-fill-1.png" alt="advertencia">
                 <p class="parrafo-adbertencia">solo letras minusculas y sin acentos</p>
-                <button>Encriptar</button>
-                <button>Desencriptar</button>
+                <div class="botones">
+                    <button class="btn-encriptar", onclick="btn_encriptar()">Encriptar</button>
+                    <button class="btn-desencriptar">Desencriptar</button>
+                </div>
             </div>
         </div>
 
