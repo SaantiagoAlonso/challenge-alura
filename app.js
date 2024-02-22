@@ -5,6 +5,9 @@ let textoDesenncriptado = ""
 let subtext = "";
 let j = 0;
 let comprobacion = ["",0]
+let contenedor_salida = document.getElementsByClassName("texto-salida");
+let contenedor_imagen = document.getElementsByClassName("contenedor-img");
+let salida = document.getElementsByClassName("salida-texto")[0];
 
 
 
@@ -42,15 +45,16 @@ function encriptar(texto){
             textoEncriptado = textoEncriptado + letra;
         }else{
             textoEncriptado = textoEncriptado + letra;
-        }
-
-        
+        }   
        
     } 
 
    
     console.log(textoEncriptado)
+    salida.value = textoEncriptado;
     textoEncriptado="";
+    letra = "";
+    
 
    
 }
@@ -59,80 +63,25 @@ function btn_encriptar(){
     texto = document.getElementsByClassName("texto-entrada")[0].value
     encriptar(texto)
     texto = ""
+    contenedor_imagen[0].style.display = "none"
+    contenedor_salida[0].style.display = "block" 
+
+
 }
 
-/*function desencriptar(text){
-    if( text.includes('ai') || text.includes('enter') || text.includes('imes') || text.includes('ober') || text.includes('ufat') ){
-        console.log('esta')
-        textoDesenncriptado = 
-    }else{
-        console.log('no esta')
-    }
-}*/
-
-// encriptar("santiago!")
-
-/*function desencriptar(text){
-
-    let subtext = "";
-    let ob = [];
+function btn_desencriptar(){
+    texto = document.getElementsByClassName("texto-entrada")[0].value
+    textoDesenncriptado = "";
+    subtext="";
+    j = 0;
+    comprobacion = ["",0];
+    desencriptar(texto)
+    texto = ""
+   
     
-    function verificar(subtext){
-       
-        switch (subtext){
-        case "ai":
-            return ob = ["a",0];
-        case "enter":
-            return ob = ["e",0];
-        case "imes":
-            return ob = ["i",0];
+}
 
-        case "ober":
-            return ob = ["o",0];
 
-        case "ufat":
-            return ob = ["u",0];
-        default:
-            return ob = ["",1]; 
-       }
-    }
-
-    for (let i = 0; i < text.length ; i++){
-        
-        
-        j = i + 1;
-
-        if(text[i] == 'a' ||text[i] == 'e' || text[i] == 'i'|| text[i] == 'o'|| text[i] == 'u'){
-            
-            subtext = text[i];
-            
-            while(subtext.length<6){               
-                
-                subtext = subtext + text[j];              
-                ob = verificar(subtext);
-                
-                if(ob[1] == 0){
-                    
-                    textoDesenncriptado = textoDesenncriptado + ob[0];
-                    subtext = ""
-                    break;
-                
-                }else{
-                    j++;
-                    textoDesenncriptado = textoDesenncriptado + text[i];
-                    subtext = text[i] 
-                }
-                
-            }
-        }else{
-             textoDesenncriptado = textoDesenncriptado + text[i];
-        }
-
-    }
-    
-    console.log(textoDesenncriptado)
-}*/
-letra = ""
 
 function desencriptar(text){
 
@@ -187,6 +136,9 @@ function desencriptar(text){
         }
 
         console.log('texto desencriptado' + "  "  +  textoDesenncriptado);
+        salida.value = textoDesenncriptado;
+    
+        // textoDesenncriptado = "";
 
     }
 
